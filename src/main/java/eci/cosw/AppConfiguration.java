@@ -27,14 +27,14 @@ public class AppConfiguration {
     public MongoDbFactory mongoDbFactory() throws Exception {
 
         // Set credentials
-        MongoCredential credential = MongoCredential.createCredential("<username>", "<database-name>", "<password>".toCharArray());
-        ServerAddress serverAddress = new ServerAddress("ds149672.mlab.com", 49672);
+        MongoCredential credential = MongoCredential.createCredential("Jeffer96", "lab04cosw", "Cosw20182".toCharArray());
+        ServerAddress serverAddress = new ServerAddress("ds229373.mlab.com", 29373);
 
         // Mongo Client
         MongoClient mongoClient = new MongoClient(serverAddress, credential, new MongoClientOptions.Builder().build());
 
 
-        return new SimpleMongoDbFactory(mongoClient, "<database-name>");
+        return new SimpleMongoDbFactory(mongoClient, "lab04cosw");
     }
 
     @Bean
